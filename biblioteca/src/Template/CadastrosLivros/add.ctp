@@ -6,22 +6,22 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Cadastros Livros'), ['action' => 'index']) ?></li>
+        <li class="heading"><?= __('Menu') ?></li>
+        <li><?= $this->Html->link(__('Livros cadastrados'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="cadastrosLivros form large-9 medium-8 columns content">
     <?= $this->Form->create($cadastrosLivro) ?>
     <fieldset>
-        <legend><?= __('Add Cadastros Livro') ?></legend>
+        <legend><?= __('Cadastrar um novo livro') ?></legend>
         <?php
-            echo $this->Form->control('autor');
-            echo $this->Form->control('editora');
-            echo $this->Form->control('titulo_obra');
+            echo $this->Form->control('Autor');
+            echo $this->Form->control('Editora');
+            echo $this->Form->control('Título da obra');
             echo $this->Form->control('data_cadastro', ['empty' => true]);
-            echo $this->Form->control('valor');
+            echo $this->Form->control('Valor');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Cadastrar')) ?>
     <?= $this->Form->end() ?>
 </div>

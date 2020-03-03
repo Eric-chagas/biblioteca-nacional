@@ -6,11 +6,11 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Cadastros Livro'), ['action' => 'edit', $cadastrosLivro->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Cadastros Livro'), ['action' => 'delete', $cadastrosLivro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cadastrosLivro->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Cadastros Livros'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Cadastros Livro'), ['action' => 'add']) ?> </li>
+        <li class="heading"><?= __('Menu') ?></li>
+        <li><?= $this->Html->link(__('Editar'), ['action' => 'edit', $cadastrosLivro->id]) ?> </li>
+        <li><?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $cadastrosLivro->id], ['confirm' => __('Tem certeza de que deseja apagar # {0}?', $cadastrosLivro->id)]) ?> </li>
+        <li><?= $this->Html->link(__('Livros cadastrados'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Cadastrar um Livro'), ['action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="cadastrosLivros view large-9 medium-8 columns content">

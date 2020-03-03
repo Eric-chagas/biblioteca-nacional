@@ -6,20 +6,20 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+        <li class="heading"><?= __('Menu') ?></li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
+                __('Apagar'),
                 ['action' => 'delete', $cadastrosLivro->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $cadastrosLivro->id)]
+                ['confirm' => __('Tem certeza de que deseja apagar # {0}?', $cadastrosLivro->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Cadastros Livros'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Livros cadastrados'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="cadastrosLivros form large-9 medium-8 columns content">
     <?= $this->Form->create($cadastrosLivro) ?>
     <fieldset>
-        <legend><?= __('Edit Cadastros Livro') ?></legend>
+        <legend><?= __('Editar') ?></legend>
         <?php
             echo $this->Form->control('autor');
             echo $this->Form->control('editora');

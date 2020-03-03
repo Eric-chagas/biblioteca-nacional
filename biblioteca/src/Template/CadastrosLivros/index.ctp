@@ -7,21 +7,21 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Menu') ?></li>
-        <li><?= $this->Html->link(__('Cadastro'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Cadastrar um Livro'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="cadastrosLivros index large-9 medium-8 columns content">
-    <h3><?= __('Cadastros Livros') ?></h3>
+    <h3><?= __('Livros Cadastrados') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('autor') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('editora') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('titulo_obra') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('data_cadastro') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('valor') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ID') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Autor') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Editora') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Título da obra') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Data de cadastro') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Valor(R$)') ?></th>
+                <th scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
@@ -34,9 +34,9 @@
                 <td><?= h($cadastrosLivro->data_cadastro) ?></td>
                 <td><?= $this->Number->format($cadastrosLivro->valor) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $cadastrosLivro->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cadastrosLivro->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cadastrosLivro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cadastrosLivro->id)]) ?>
+                    <?= $this->Html->link(__('Ver'), ['action' => 'view', $cadastrosLivro->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $cadastrosLivro->id]) ?>
+                    <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $cadastrosLivro->id], ['confirm' => __('Tem certeza de que deseja apagar # {0}?', $cadastrosLivro->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -44,12 +44,12 @@
     </table>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primeiro')) ?>
+            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('próximo') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+        <p><?= $this->Paginator->counter(['format' => __('Página {{page}} de {{pages}} <br> mostrando {{current}} resultados de {{count}} total')]) ?></p>
     </div>
 </div>
