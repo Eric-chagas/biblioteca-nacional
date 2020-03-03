@@ -6,7 +6,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Menu') ?></li>
+        <li class="heading"><?= __('Livros') ?></li>
         <li><?= $this->Form->postLink(
                 __('Apagar'),
                 ['action' => 'delete', $cadastrosLivro->id],
@@ -28,6 +28,6 @@
             echo $this->Form->control('valor');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Confirmar')) ?>
     <?= $this->Form->end() ?>
 </div>

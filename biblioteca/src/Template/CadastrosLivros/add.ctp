@@ -6,7 +6,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Menu') ?></li>
+        <li class="heading"><?= __('Livros') ?></li>
         <li><?= $this->Html->link(__('Livros cadastrados'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
