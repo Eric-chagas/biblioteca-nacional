@@ -6,10 +6,12 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Livros') ?></li>
-        <li><a href="cadastros-livros/add">Cadastrar um Livro</a></li>
         <li class="heading"><?= __('Clientes') ?></li>
         <li><?= $this->Html->link(__('Cadastrar cliente'), ['action' => 'add']) ?></li>
+        <li class="heading"><?= __('Livros') ?></li>
+        <li><a href="cadastros-livros/add">Cadastrar um Livro</a></li>
+        <li class="heading"><?= __('Empréstimos') ?></li>
+        <li><a href="emprestimos/index">Empréstimos abertos</a></li>
     </ul>
 </nav>
 <div class="clientes index large-9 medium-8 columns content">
