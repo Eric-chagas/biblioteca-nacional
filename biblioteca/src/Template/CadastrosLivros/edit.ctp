@@ -28,6 +28,6 @@
             echo $this->Form->control('valor');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Confirmar')) ?>
     <?= $this->Form->end() ?>
 </div>
