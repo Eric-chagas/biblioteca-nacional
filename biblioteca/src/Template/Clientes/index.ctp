@@ -6,6 +6,8 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
+        <li class="heading"><?= __('Livros') ?></li>
+        <li><a href="cadastros-livros/add">Cadastrar um Livro</a></li>
         <li class="heading"><?= __('Clientes') ?></li>
         <li><?= $this->Html->link(__('Cadastrar cliente'), ['action' => 'add']) ?></li>
     </ul>
